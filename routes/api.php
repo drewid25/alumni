@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\NewsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// News Route
+Route::get('/news', [NewsController::class, 'index']);
+Route::post('/news/store', [NewsController::class, 'store']);
+
+// Testimony Route
+Route::get('/testimonies', [NewsController::class, 'index']);
+Route::post('/testimonies/store', [NewsController::class, 'store']);
