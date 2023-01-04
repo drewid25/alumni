@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\NewsController;
+use App\Http\Controllers\api\TestimonyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +21,5 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::post('/news/store', [NewsController::class, 'store']);
 
 // Testimony Route
-Route::get('/testimonies', [NewsController::class, 'index']);
-Route::post('/testimonies/store', [NewsController::class, 'store']);
+Route::get('/alumnistory', [TestimonyController::class, 'index']);
+Route::post('/alumnistory/store', [TestimonyController::class, 'store']);

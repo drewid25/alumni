@@ -19,13 +19,13 @@ class TestimonyController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'image' => 'required|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required',
             'story' => 'required'
         ]);
-        $image_path = $request->file('image')->store('image', 'public');
+
         Testimony::insert([
             'title' => $request->title,
-            'image' => $image_path,
+            'image' => $request->image,
             'story' => $request->story
         ]);
         return response('Testimony  Inserted Successfully');
