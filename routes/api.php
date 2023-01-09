@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\api\NewsController;
 use App\Http\Controllers\api\TestimonyController;
+use App\Http\Controllers\api\JobsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,6 @@ Route::post('/news/store', [NewsController::class, 'store']);
 // Testimony Route
 Route::get('/alumnistory', [TestimonyController::class, 'index']);
 Route::post('/alumnistory/store', [TestimonyController::class, 'store']);
+// Jobs Route
+Route::get('/jobs', [JobsController::class, 'index']);
+Route::post('/jobs/store', [JobsController::class, 'store']);
