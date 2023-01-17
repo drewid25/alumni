@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\api\NewsController;
 use App\Http\Controllers\api\TestimonyController;
+use App\Http\Controllers\api\TrainingController;
 use App\Http\Controllers\api\JobsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,6 @@ Route::post('/alumnistory/store', [TestimonyController::class, 'store']);
 // Jobs Route
 Route::get('/jobs', [JobsController::class, 'index']);
 Route::post('/jobs/store', [JobsController::class, 'store']);
+// Training Route
+Route::get('/trainings', [TrainingController::class, 'index']);
+Route::post('/trainings/store', [TrainingController::class, 'store']);
